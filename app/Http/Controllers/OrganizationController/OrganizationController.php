@@ -475,9 +475,9 @@ class OrganizationController extends Controller
 
 
                 // employment categories
-                $types = DB::connection('mysql_second')->table('configuration_template_employment_categories')->get();
+                $categories = DB::connection('mysql_second')->table('configuration_template_employment_categories')->get();
 
-                foreach ($types as $user) {
+                foreach ($categories as $user) {
                     DB::table('organization_employment_categories')->insert([
                         'organization_id' => $organization->organization_id,
                         'organization_configuration_template_id' => $templateId,
