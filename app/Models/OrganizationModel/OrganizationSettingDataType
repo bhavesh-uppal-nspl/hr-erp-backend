@@ -1,0 +1,20 @@
+<?php
+
+namespace App\Models\OrganizationModel;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
+use Illuminate\Database\Eloquent\Model;
+
+class OrganizationSettingDataType extends Model
+{
+    use HasFactory;
+    protected $table = 'organization_setting_data_types';
+    protected $primaryKey = 'organization_setting_data_type_id';
+    public $timestamps = true;
+    protected $fillable = [
+        'organization_entity_id',
+        'setting_data_type_name',
+        'description'
+    ];
+   
+}
+
